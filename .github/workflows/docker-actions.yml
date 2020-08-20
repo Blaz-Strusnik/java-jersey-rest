@@ -4,13 +4,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      ‐ name: build-push
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ spidi001 }}
-          password: ${{ h2D4a6T9i03n1V5 }}
-          registry: myregistry
-          repository: spidi001/java-jersey
-          tags: v1		
+          username: ${{ secrets.spidi001 }}
+          password: ${{ secrets.h2D4a6T9i03n1V5 }}
+          repository: spidi001/java-jersey-rest
+          tag_with_ref: true
+          tag_with_sha: true	
           
 
