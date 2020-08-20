@@ -4,13 +4,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    ‐ name: build-push
-      uses: docker/build-push-action@v1
-      with:
-        username: ${{ spidi001 }}
-        password: ${{ h2D4a6T9i03n1V5 }}
-        registry: myregistry
-        repository: spidi001/java-jersey
-        tags: v1		
+      ‐ name: build-push
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ spidi001 }}
+          password: ${{ h2D4a6T9i03n1V5 }}
+          registry: myregistry
+          repository: spidi001/java-jersey
+          tags: v1		
           
 
