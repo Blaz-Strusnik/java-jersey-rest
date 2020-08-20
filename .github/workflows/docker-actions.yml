@@ -13,5 +13,5 @@ jobs:
           username: ${{ secrets.spidi001 }}
           password: ${{ secrets.h2D4a6T9i03n1V5 }}
           repository: spidi001/java-jersey-rest
-          tags: latest
+          
 
