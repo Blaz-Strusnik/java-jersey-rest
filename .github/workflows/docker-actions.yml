@@ -4,10 +4,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Publish to Registry
-      uses: elgohr/Publish-Docker-Github-Action@master
-      with:
-        name: spidi001/java-jersey-rest
-        username: ${{ secrets.spidi001 }}
-        password: ${{ secrets.h2D4a6T9i03n1V5 }}
+  - name: Checkout code
+    uses: actions/checkout@v2
+
+  - name: Build and push Docker images
+    uses: docker/build-push-action@v1
+    with:
+      username: ${{ secrets.spidi001 }}
+      password: ${{ secrets.h2D4a6T9i03n1V5 }}
+      repository: spidi001/java-jersey-rest
+      tags: latest
+
