@@ -9,5 +9,5 @@ jobs:
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
         name: myDocker/repository
-        username: ${{ secrets.spidi001 }}
+        username: ${{ with.spidi001 }}
         password: ${{ secrets.h2D4a6T9i03n1V5 }}
