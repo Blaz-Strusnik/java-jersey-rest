@@ -1,16 +1,13 @@
-name: docker-push-actions-workflow
-on: push
+name: Publish Docker
+on: [push]
 jobs:
-  docker:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Build and push Docker images
-        uses: docker/build-push-action@v1
-        with:
-          username: ${{ secrets.spidi001 }}
-          password: ${{ secrets.53edfb2a-bfdf-4fb4-894a-68e6092ad04d }}
-          repository: spidi001/java-jersey-rest
-          tags: 1.0.0
+    - uses: actions/checkout@master
+    - name: Publish to Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: myDocker/repository
+        username: ${{ secrets.spidi001 }}
+        password: ${{ secrets.53edfb2a-bfdf-4fb4-894a-68e6092ad04d }}
