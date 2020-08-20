@@ -14,6 +14,6 @@ jobs:
           password: ${{ secrets.h2D4a6T9i03n1V5 }}
           repository: spidi001/java-jersey-rest
           tag_with_ref: true
-          	
+          push: ${{ startsWith(github.ref, 'refs/tags/') }}	
           
 
