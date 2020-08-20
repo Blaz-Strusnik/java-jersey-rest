@@ -10,4 +10,4 @@ jobs:
       with:
         name: myDocker/repository
         username: ${{ secrets.spidi001 }}
-        password: ${{ secrets.53edfb2a-bfdf-4fb4-894a-68e6092ad04d }}
+        password: ${{ secrets.DOCKER_USERNAME }}
